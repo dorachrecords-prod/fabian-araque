@@ -11,6 +11,7 @@
 <meta name="author" content="Fabian Araque">
 	
 <link rel="canonical" href="https://dorachrecords-prod.github.io/fabian-araque/">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <meta property="og:title" content="Fabian Araque | Universo musical y audiovisual">
 <meta property="og:description" content="Explora los proyectos musicales y visuales de Fabian Araque: Focaraque, Hemiola y Síncopa, Río y Asfalto y más.">
@@ -41,7 +42,7 @@
 }
 
 body{
-  font-family: Helvetica, Arial, sans-serif;
+  font-family:'Inter', Helvetica, Arial, sans-serif;
   background:var(--white);
   color:var(--black);
   line-height:1.6;
@@ -211,6 +212,62 @@ audio{
   width:100%;
   margin-top:8px;
 }
+	.universe-section{
+  padding:80px 8vw;
+  background:#fff;
+}
+
+.universe-section h2{
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.universe-item{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+  margin-bottom:90px;
+}
+
+.universe-item.reverse{
+  direction:rtl;
+}
+
+.universe-item.reverse *{
+  direction:ltr;
+}
+
+.universe-text p{
+  font-size:1rem;
+  line-height:1.8;
+  max-width:520px;
+}
+
+.universe-text strong{
+  font-weight:500;
+  letter-spacing:.5px;
+}
+
+.universe-image img{
+  width:100%;
+  max-width:420px;
+  filter:grayscale(100%);
+  transition:.5s ease;
+}
+
+.universe-image img:hover{
+  filter:grayscale(0%);
+  transform:scale(1.02);
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .universe-item{
+    grid-template-columns:1fr;
+  }
+}
+
 
 /* CHANNELS */
 .channels{
@@ -273,8 +330,8 @@ footer p{
 <section class="hero-image">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span style="text-align: center;">Música · Creación · Viaje</span>
-    <h1 style="text-align: center;">Fabian Araque</h1>
+    <span>Música · Creación · Viajes</span>
+    <h1>Fabian Araque</h1>
     <p>Música en equilibrio. Historias que se escuchan.</p>
   </div>
 </section>
@@ -358,46 +415,63 @@ footer p{
   </div>
 </section>
 <!-- UNIVERSOS -->
-<section class="compact bg-blue pattern">
-  <h2 style="text-align:center;">Universos</h2>
-  <p style="text-align:center; margin:0 auto 50px; max-width:520px;">
-    Proyectos que dialogan entre música, educación y experiencia.
-    Cada uno es una forma distinta de habitar el proceso creativo.
-  </p>
+<section class="universe-section">
+  <h2>Universo creativo</h2>
 
-  <div style="max-width:700px; margin:0 auto;">
-    
-    <p>
-      <strong>Dorach Records</strong><br>
-		Sello y laboratorio de producción musical fundado por Fabian Araque.<br>
-		Espacio de exploración sonora y desarrollo de proyectos independientes.
-      <a href="https://dorachrecords-prod.github.io/dorach-records/" target="_blank">Entrar al laboratorio →</a>
-    </p><br>
+  <!-- DORACH -->
+  <div class="universe-item">
+    <div class="universe-text">
+      <p>
+        <strong>Dórach Records</strong> es el laboratorio donde nacen las ideas sonoras.
+        Un espacio de exploración, producción y escucha consciente.
+      </p>
+      <p>
+        Aquí desarrollo música propia y colaborativa, cruzando sonido,
+        imagen y narrativa audiovisual.
+      </p>
+    </div>
 
-    <p>
-      <strong>Focaraque</strong><br>
-      Personaje animado y universo narrativo para explorar la música<br>
-      desde el juego, el ritmo y la emoción.<br>
-      <a href="https://www.instagram.com/focaraquemusic/" target="_blank">Ver el universo →</a>
-    </p><br>
+    <div class="universe-image">
+      <img src="assets/universe-dorach.jpg" alt="Dorach Records">
+    </div>
+  </div>
 
-    <p>
-      <strong>Hemiola y Síncopa</strong><br>
-      Proyecto educativo enfocado en teoría musical aplicada,<br>
-      instrumento, ritmo y escucha consciente.
-	  <a href="https://www.instagram.com/hemiolaysincopaac/" target="_blank">Aprende con nosotros →</a>
-    </p><br>
+  <!-- HEMIOLA -->
+  <div class="universe-item reverse">
+    <div class="universe-text">
+      <p>
+        <strong>Hemiola y Síncopa</strong> nace desde la pedagogía musical
+        y la curiosidad por el ritmo.
+      </p>
+      <p>
+        Un espacio para comprender la música desde el cuerpo,
+        la escucha y la experiencia compartida.
+      </p>
+    </div>
 
-    <p>
-      <strong>Río y Asfalto</strong><br>
-      Bitácora de viajes, caminos y encuentros.<br>
-      La música fuera del estudio.
-      <a href="https://www.instagram.com/rioyasfalto.mc/" target="_blank">Conoce cada viaje →</a>
-	</p>
+    <div class="universe-image">
+	      <img src="assets/universe-hemiola.jpg" alt="Hemiola y Síncopa">
+    </div>
+  </div>
 
+  <!-- FOCA -->
+  <div class="universe-item">
+    <div class="universe-text">
+      <p>
+        <strong>Focaraque</strong> es un personaje animado que traduce
+        ideas musicales en gestos, silencios y humor.
+      </p>
+      <p>
+        Un canal narrativo para hablar de música sin palabras,
+        desde la calma y el acting no verbal.
+      </p>
+    </div>
+
+    <div class="universe-image">
+      <img src="assets/universe-foca.jpg" alt="Focaraque">
+    </div>
   </div>
 </section>
-
 <!-- CTA -->
 <section class="compact">
   <h2 style="text-align:center;">Sigamos la conversación</h2>
@@ -420,6 +494,7 @@ footer p{
 
 </body>
 </html>
+
 
 
 
