@@ -26,14 +26,14 @@
 	
 <style>
 :root{
-  --black:#0d0d0d;
-  --white:#fbfbfb;
-  --gray:#6f6f6f;
-  --blue:#9fbfc9;
-  --blue-bg:#eef4f6;
+  --cyan:#9fbfc9;
+  --cyan-soft:#eef4f6;
   --coffee:#a8896d;
-  --coffee-bg:#f4eee8;
+  --coffee-soft:#f4eee8;
+  --black:#0d0d0d;
+  --gray:#6f6f6f;
 }
+
 
 *{
   margin:0;
@@ -100,15 +100,13 @@ p{
 }
 
 .hero-overlay{
-  position:absolute;
-  inset:0;
   background:linear-gradient(
     to top,
-    rgba(0,0,0,.65),
-    rgba(0,0,0,.2)
+    rgba(168,137,109,.55), /* café */
+    rgba(159,191,201,.25)  /* cian */
   );
-  z-index:1;
 }
+
 
 .hero-content{
   position:relative;
@@ -133,7 +131,15 @@ p{
   font-size:3.4rem;
   margin:10px 0;
 }
-	
+
+	a{
+  color:var(--black);
+}
+
+a:hover{
+  color:var(--coffee);
+}
+
 
 /* ABOUT (INVERTIDO) */
 .about{
@@ -226,8 +232,11 @@ audio{
   margin-top:8px;
 }
 	.universe-section{
-  padding:80px 8vw;
-  background:#fff;
+  background:linear-gradient(
+    to bottom,
+    var(--cyan-soft),
+    #ffffff
+  );
 }
 
 .universe-section h2{
@@ -258,9 +267,10 @@ audio{
 }
 
 .universe-text strong{
+  color:var(--coffee);
   font-weight:500;
-  letter-spacing:.5px;
 }
+
 
 .universe-image a{
   display:inline-block;
@@ -268,20 +278,41 @@ audio{
 }
 
 .universe-image a::after{
-  content:"↗";
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(159,191,201,.35); /* cian */
+  opacity:0;
+  transition:.4s ease;
+}
+	.universe-item:nth-child(odd){
+  border-left:3px solid var(--cyan);
+  padding-left:30px;
+}
+
+.universe-item:nth-child(even){
+  border-left:3px solid var(--coffee);
+  padding-left:30px;
+}
+	.universe-image a span{
   position:absolute;
   inset:0;
   display:flex;
   align-items:center;
   justify-content:center;
-  background:rgba(0,0,0,0.45);
   color:white;
-  font-size:.2rem;
+  font-size:.75rem;
   letter-spacing:2px;
   text-transform:uppercase;
   opacity:0;
-  transition:.4s ease;
+  transition:.4s;
 }
+
+.universe-image a:hover::after,
+.universe-image a:hover span{
+  opacity:1;
+}
+
 
 .universe-image a:hover::after{
   opacity:1;
@@ -527,6 +558,7 @@ footer p{
 
 </body>
 </html>
+
 
 
 
