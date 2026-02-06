@@ -249,18 +249,30 @@ audio{
   letter-spacing:.5px;
 }
 
-.universe-image img{
-  width:100%;
-  max-width:420px;
-  filter:grayscale(100%);
-  transition:.5s ease;
+.universe-image a{
+  display:inline-block;
+  position:relative;
 }
 
-.universe-image img:hover{
-  filter:grayscale(0%);
-  transform:scale(1.02);
+.universe-image a::after{
+  content:"↗";
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,0.45);
+  color:white;
+  font-size:.2rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  opacity:0;
+  transition:.4s ease;
 }
 
+.universe-image a:hover::after{
+  opacity:1;
+}
 /* Responsive */
 @media(max-width:900px){
   .universe-item{
@@ -496,6 +508,7 @@ footer p{
 
 </body>
 </html>
+
 
 
 
