@@ -20,7 +20,7 @@
       --cafe: #6b3f26;
       --cafe-claro: #a47148;
       --fondo: #f7f5f2;
-      --negro: #1e1e1e;
+      --oscuro: #1e1e1e;
     }
 
     * {
@@ -32,13 +32,27 @@
     body {
       font-family: 'Inter', sans-serif;
       background-color: var(--fondo);
-      color: var(--negro);
-      line-height: 1.6;
+      color: var(--oscuro);
+      line-height: 1.7;
     }
 
     img {
       max-width: 100%;
       display: block;
+    }
+
+    section {
+      padding: 6rem 1.5rem;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+      color: var(--cian);
+    }
+
+    p {
+      max-width: 720px;
     }
 
     a {
@@ -53,8 +67,15 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 4rem 1.5rem;
       background: radial-gradient(circle at top, #e8f9f7, transparent 70%);
+    }
+
+    .hero p:first-child {
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 1rem;
     }
 
     .hero h1 {
@@ -62,9 +83,8 @@
       margin-bottom: 1rem;
     }
 
-    .hero p {
+    .hero p:last-child {
       font-size: 1.1rem;
-      color: #444;
     }
 
     .hero span {
@@ -72,18 +92,21 @@
       font-weight: 600;
     }
 
+    /* ---------- ESCUCHA ---------- */
+    .listen {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .listen p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
     /* ---------- UNIVERSOS ---------- */
     .universe-section {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 6rem 1.5rem;
-    }
-
-    .universe-section h2 {
-      text-align: center;
-      font-size: 2.4rem;
-      margin-bottom: 4rem;
-      color: var(--cian);
     }
 
     .universe-item {
@@ -102,23 +125,15 @@
       direction: ltr;
     }
 
-    .universe-text p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #3a2a20;
-      margin-bottom: 1rem;
-    }
-
     .universe-text strong {
       color: var(--cafe);
       font-weight: 700;
     }
 
     .universe-image {
-      width: 100%;
       height: 420px;
-      overflow: hidden;
       border-radius: 22px;
+      overflow: hidden;
       box-shadow: 0 20px 40px rgba(0,0,0,0.12);
     }
 
@@ -131,6 +146,16 @@
 
     .universe-image a:hover img {
       transform: scale(1.06);
+    }
+
+    /* ---------- VIAJES ---------- */
+    .travel {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .travel p {
+      margin-bottom: 1.5rem;
     }
 
     /* ---------- FOOTER ---------- */
@@ -169,23 +194,32 @@
     </div>
   </section>
 
+  <!-- ESCUCHA -->
+  <section class="listen">
+    <h2>Escucha</h2>
+    <p>
+      La música es el punto de partida. Producción propia, colaboraciones
+      y exploraciones sonoras que nacen desde la escucha consciente.
+    </p>
+    <p>
+      Cada proyecto es una búsqueda de equilibrio entre ritmo, emoción
+      y narrativa.
+    </p>
+  </section>
+
   <!-- UNIVERSOS -->
   <section class="universe-section">
     <h2>Universo creativo</h2>
 
-    <!-- DORACH -->
     <div class="universe-item">
       <div class="universe-text">
         <p>
           <strong>Dórach Records</strong> es el laboratorio donde nacen las ideas sonoras.
-          Un espacio de exploración, producción y escucha consciente.
         </p>
         <p>
-          Música propia y colaborativa donde sonido, imagen
-          y narrativa audiovisual dialogan.
+          Producción musical y audiovisual como un proceso de exploración.
         </p>
       </div>
-
       <div class="universe-image">
         <a href="https://www.instagram.com/dorachrecordspm/" target="_blank">
           <img src="assets/universe-dorach.jpg" alt="Dorach Records">
@@ -193,7 +227,6 @@
       </div>
     </div>
 
-    <!-- HEMIOLA -->
     <div class="universe-item reverse">
       <div class="universe-text">
         <p>
@@ -201,11 +234,9 @@
           y la curiosidad por el ritmo.
         </p>
         <p>
-          Un espacio para comprender la música desde el cuerpo,
-          la escucha y la experiencia compartida.
+          Comprender la música desde el cuerpo y la experiencia.
         </p>
       </div>
-
       <div class="universe-image">
         <a href="https://www.instagram.com/hemiolaysincopaac/" target="_blank">
           <img src="assets/universe-hemiola.jpg" alt="Hemiola y Síncopa">
@@ -213,19 +244,16 @@
       </div>
     </div>
 
-    <!-- FOCA -->
     <div class="universe-item">
       <div class="universe-text">
         <p>
-          <strong>Focaraque</strong> es un personaje animado que traduce
-          ideas musicales en gestos, silencios y humor.
+          <strong>Focaraque</strong> es un personaje animado que traduce ideas musicales
+          en gestos y silencios.
         </p>
         <p>
-          Un canal narrativo para hablar de música sin palabras,
-          desde la calma y el acting no verbal.
+          Música contada sin palabras.
         </p>
       </div>
-
       <div class="universe-image">
         <a href="https://www.instagram.com/focaraquemusic/" target="_blank">
           <img src="assets/universe-foca.jpg" alt="Focaraque">
@@ -234,9 +262,21 @@
     </div>
   </section>
 
+  <!-- VIAJES -->
+  <section class="travel">
+    <h2>Exploraciones</h2>
+    <p>
+      Río y Asfalto es el espacio donde documento viajes,
+      encuentros y experiencias locales.
+    </p>
+    <p>
+      Un archivo personal de caminos, paisajes y momentos compartidos.
+    </p>
+  </section>
+
   <!-- FOOTER -->
   <footer>
-    © <span>Fabian Araque</span> · Música, pedagogía y universos narrativos
+    © <span>Fabian Araque</span> · Música · Pedagogía · Universos narrativos
   </footer>
 
 </body>
