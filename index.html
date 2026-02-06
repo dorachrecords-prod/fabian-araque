@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fabian Araque</title>
+
+<style>
+:root{
+  --black:#0d0d0d;
+  --white:#fbfbfb;
+  --gray:#6f6f6f;
+  --blue:#9fbfc9;
+  --blue-bg:#eef4f6;
+  --coffee:#a8896d;
+  --coffee-bg:#f4eee8;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Helvetica, Arial, sans-serif;
+  background:var(--white);
+  color:var(--black);
+  line-height:1.6;
+}
+
+section{
+  padding:60px 8vw;
+  position:relative;
+  overflow:hidden;
+}
+
+.compact{
+  padding:45px 8vw;
+}
+
+.bg-blue{ background:var(--blue-bg); }
+.bg-coffee{ background:var(--coffee-bg); }
+
+.pattern::before{
+  content:"♩ ♪ ♫ ♬";
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:7rem;
+  letter-spacing:2rem;
+  color:rgba(0,0,0,0.035);
+  pointer-events:none;
+}
+
+h1{
+  font-size:3rem;
+  font-weight:300;
+}
+
+h2{
+  font-size:1.9rem;
+  font-weight:300;
+  margin-bottom:20px;
+}
+
+p{
+  max-width:650px;
+  color:#222;
+}
+
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:60px;
+  align-items:center;
+}
+
+.hero span{
+  font-size:.75rem;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--gray);
+}
+
+.hero img{
+  width:100%;
+  max-width:260px;
+  filter:grayscale(100%);
+}
+
+/* ABOUT (INVERTIDO) */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:flex-start;
+}
+
+.roles{
+  border-left:2px solid var(--blue);
+  padding-left:25px;
+}
+
+.roles a{
+  display:block;
+  font-size:.9rem;
+  color:var(--black);
+  margin-bottom:14px;
+  text-decoration:none;
+  position:relative;
+}
+
+.roles a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-3px;
+  width:0;
+  height:1px;
+  background:var(--coffee);
+  transition:.3s;
+}
+
+.roles a:hover::after{
+  width:100%;
+}
+
+/* INSTAGRAM GRID */
+.instagram{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.instagram a{
+  display:block;
+}
+
+.instagram img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  filter:grayscale(100%);
+  transition:.3s;
+}
+
+.instagram img:hover{
+  filter:grayscale(0%);
+}
+
+/* AUDIO */
+.audio-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+}
+
+.audio-card{
+  border-top:1px solid rgba(0,0,0,0.15);
+  padding-top:10px;
+}
+
+.audio-card p{
+  font-size:.85rem;
+  color:#444;
+}
+
+audio{
+  width:100%;
+  margin-top:8px;
+}
+
+/* CHANNELS */
+.channels{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+}
+
+.channels a{
+  font-size:.85rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--black);
+  text-decoration:none;
+  position:relative;
+}
+
+.channels a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0;
+  height:1px;
+  background:var(--coffee);
+  transition:.3s;
+}
+
+.channels a:hover::after{
+  width:100%;
+}
+
+footer{
+  padding:35px 8vw;
+  font-size:.75rem;
+  color:#555;
+  text-align:center;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero,.about,.audio-grid{
+    grid-template-columns:1fr;
+  }
+
+  .instagram{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero bg-blue pattern">
+
+  <img src="assets/fabian-01.jpg" alt="Fabian Araque">
+
+  <div>
+    <span>Beat Maker · Músico de sesión</span>
+    <h1>Fabian Araque</h1>
+		<p>
+			Pianista Acompañante, compositor.
+		</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about compact">
+
+	<div>
+		<h2 style="text-align: center;" >Identidad</h2>
+		<p>
+		Soy un punto de encuentro entre música, educación y creaciónes.
+		</p>
+	</div>
+
+	<div class="roles">
+		<a href="https://dorachrecords-prod.github.io/dorach-records/" target="_blank">Dorach Records — Compositor</a>
+		<a href="#" target="_blank">Hemiola & Síncopa — Profesor</a>
+		<a href="#" target="_blank">Focaraque — Productor · Creador</a>
+	</div>
+</section>
+<!-- INSTAGRAM -->
+<section class="compact bg-blue pattern">
+  <h2 style="text-align: center;" >Galería</h2>
+  <div class="instagram">
+    <a style="text-align: center;" href="https://youtu.be/aqxXMvH-PKk?si=3P_SmCGmODyA62Ia" target="_blank"><img src="assets/ig-01.jpg">LLUVIOSO</a>
+    <a style="text-align: center;" href="https://youtu.be/OhuwwmVpaYg?si=-lvtpMZaRPkICVZO" target="_blank"><img src="assets/ig-02.jpg">COMPLICIDAD</a>
+    <a style="text-align: center;" href="https://youtu.be/cs6wR57kozo?si=x7HeJFuplHhERh_6" target="_blank"><img src="assets/ig-03.jpg">CONSTANCIA</a>
+    <a style="text-align: center;" href="https://youtu.be/4GlO7EjRajc?si=ERH_m4t6zu8em66G" target="_blank"><img src="assets/ig-04.jpg">MOTAS</a>
+  </div>
+</section>
+<!-- AUDIO -->
+<section class="compact bg-coffee pattern">
+  <h2 style="text-align: center;" >Escuchar</h2>
+  <div class="audio-grid">
+    <div class="audio-card">
+      <p>Ültimo loop</p>
+      <audio controls src="assets/audio-01.mp3"></audio>
+    </div>
+    <div class="audio-card">
+      <p>Improvisación en F</p>
+      <audio controls src="assets/audio-02.mp3"></audio>
+    </div>
+    <div class="audio-card">
+      <p>Acompañamiento - Contigo Aprendí</p>
+      <audio controls src="assets/audio-03.mp3"></audio>
+    </div>
+    <div class="audio-card">
+      <p>Acompañamiento - Quizás</p>
+      <audio controls src="assets/audio-04.mp3"></audio>
+    </div>
+  </div>
+</section>
+
+<!-- CHANNELS -->
+<section class="compact">
+  <div class="channels">
+    <a target="_blank" href="https://www.instagram.com/focaraquemusic/">Instagram</a>
+    <a target="_blank" href="https://youtube.com/@focaaraquemusic?si=2pGCvqGrX8shV3cQ">YouTube</a>
+    <a target="_blank" href="https://wa.me/573008884574">WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  © Fabian Araque — música en equilibrio
+</footer>
+
+</body>
+</html>
