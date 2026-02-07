@@ -1,283 +1,303 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fabian Araque — Música · Creación · Viajes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- META -->
-  <meta name="description" content="Fabian Araque. Música en equilibrio. Historias que se escuchan. Creación musical, pedagogía y universos narrativos." />
-  <meta name="theme-color" content="#4fd1c5" />
+<title>Fabian Araque</title>
+<meta name="description" content="Fabian Araque — Música, creación y narrativa audiovisual. Proyectos musicales, pedagogía y universos creativos.">
 
-  <!-- FUENTE -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0d0d0d;
+  --white:#fbfbfb;
+  --gray:#6f6f6f;
+  --cyan:#8fbec8;
+  --cyan-bg:#eaf4f6;
+  --coffee:#a8896d;
+  --coffee-bg:#f3ece4;
+}
 
-  <style>
-    :root {
-      --cian: #4fd1c5;
-      --cafe: #6b3f26;
-      --cafe-claro: #a47148;
-      --fondo: #f7f5f2;
-      --oscuro: #1e1e1e;
-    }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+body{
+  font-family: Helvetica, Arial, sans-serif;
+  background:var(--white);
+  color:var(--black);
+  line-height:1.6;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--fondo);
-      color: var(--oscuro);
-      line-height: 1.7;
-    }
+section{
+  padding:70px 8vw;
+  position:relative;
+}
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+.compact{padding:50px 8vw;}
+.bg-cyan{background:var(--cyan-bg);}
+.bg-coffee{background:var(--coffee-bg);}
 
-    section {
-      padding: 6rem 1.5rem;
-    }
+.pattern::before{
+  content:"♩ ♪ ♫ ♬";
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:6rem;
+  letter-spacing:2rem;
+  color:rgba(0,0,0,.03);
+  pointer-events:none;
+}
 
-    h2 {
-      font-size: 2.4rem;
-      margin-bottom: 2rem;
-      color: var(--cian);
-    }
+h1{font-size:3rem;font-weight:300;}
+h2{font-size:2rem;font-weight:300;margin-bottom:25px;}
+p{max-width:640px;color:#222;}
 
-    p {
-      max-width: 720px;
-    }
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:60px;
+  align-items:center;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+.hero span{
+  font-size:.75rem;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--gray);
+}
 
-    /* ---------- HERO ---------- */
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: radial-gradient(circle at top, #e8f9f7, transparent 70%);
-    }
+.hero img{
+  width:100%;
+  max-width:260px;
+  filter:grayscale(100%);
+}
 
-    .hero p:first-child {
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-      color: #555;
-      margin-bottom: 1rem;
-    }
+/* ABOUT */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
+.roles{
+  border-left:2px solid var(--cyan);
+  padding-left:25px;
+}
 
-    .hero p:last-child {
-      font-size: 1.1rem;
-    }
+.roles a{
+  display:block;
+  font-size:.9rem;
+  color:var(--black);
+  margin-bottom:14px;
+  text-decoration:none;
+  position:relative;
+}
 
-    .hero span {
-      color: var(--cian);
-      font-weight: 600;
-    }
+.roles a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-3px;
+  width:0;
+  height:1px;
+  background:var(--coffee);
+  transition:.3s;
+}
 
-    /* ---------- ESCUCHA ---------- */
-    .listen {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+.roles a:hover::after{width:100%;}
 
-    .listen p {
-      margin-bottom: 1.5rem;
-      font-size: 1.05rem;
-    }
+/* UNIVERSO */
+.universe-section h2{text-align:center;}
 
-    /* ---------- UNIVERSOS ---------- */
-    .universe-section {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+.universe-item{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+  margin-top:60px;
+}
 
-    .universe-item {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-      margin-bottom: 6rem;
-    }
+.universe-item.reverse{direction:rtl;}
+.universe-item.reverse > *{direction:ltr;}
 
-    .universe-item.reverse {
-      direction: rtl;
-    }
+.universe-text p{margin-bottom:18px;}
 
-    .universe-item.reverse > * {
-      direction: ltr;
-    }
+.universe-image img{
+  width:100%;
+  border-radius:6px;
+  filter:grayscale(100%);
+  transition:.4s;
+}
 
-    .universe-text strong {
-      color: var(--cafe);
-      font-weight: 700;
-    }
+.universe-image img:hover{filter:grayscale(0%);}
 
-    .universe-image {
-      height: 420px;
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-    }
+/* EXPLORACIONES */
+.instagram{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
 
-    .universe-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
+.instagram a{text-align:center;text-decoration:none;color:inherit;}
 
-    .universe-image a:hover img {
-      transform: scale(1.06);
-    }
+.instagram img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  filter:grayscale(100%);
+  transition:.3s;
+}
 
-    /* ---------- VIAJES ---------- */
-    .travel {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+.instagram img:hover{filter:grayscale(0%);}
 
-    .travel p {
-      margin-bottom: 1.5rem;
-    }
+/* AUDIO */
+.audio-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+}
 
-    /* ---------- FOOTER ---------- */
-    footer {
-      text-align: center;
-      padding: 3rem 1.5rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
+.audio-card{
+  border-top:1px solid rgba(0,0,0,.15);
+  padding-top:10px;
+}
 
-    footer span {
-      color: var(--cian);
-    }
+.audio-card p{font-size:.85rem;color:#444;}
+audio{width:100%;margin-top:8px;}
 
-    /* ---------- RESPONSIVE ---------- */
-    @media (max-width: 768px) {
-      .universe-item {
-        grid-template-columns: 1fr;
-      }
+/* CHANNELS */
+.channels{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+}
 
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-    }
-  </style>
+.channels a{
+  font-size:.85rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--black);
+  text-decoration:none;
+  position:relative;
+}
+
+.channels a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0;
+  height:1px;
+  background:var(--coffee);
+  transition:.3s;
+}
+
+.channels a:hover::after{width:100%;}
+
+footer{
+  padding:40px 8vw;
+  font-size:.75rem;
+  color:#555;
+  text-align:center;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero,.about,.universe-item,.audio-grid{grid-template-columns:1fr;}
+  .instagram{grid-template-columns:repeat(2,1fr);}
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div>
-      <p>Música · Creación · Viajes</p>
-      <h1>Fabian Araque</h1>
-      <p><span>Música en equilibrio.</span> Historias que se escuchan.</p>
-    </div>
-  </section>
+<section class="hero bg-cyan pattern">
+  <img src="assets/fabian-01.jpg" alt="Fabian Araque">
+  <div>
+    <span>Música · Creación · Viajes</span>
+    <h1>Fabian Araque</h1>
+    <p>Música en equilibrio. Historias que se escuchan.</p>
+  </div>
+</section>
 
-  <!-- ESCUCHA -->
-  <section class="listen">
-    <h2>Escucha</h2>
+<section class="about compact">
+  <div>
+    <h2>Identidad</h2>
     <p>
-      La música es el punto de partida. Producción propia, colaboraciones
-      y exploraciones sonoras que nacen desde la escucha consciente.
+      Trabajo en el cruce entre música, educación y creación audiovisual.
+      Exploro la música, el viaje y la animación como experiencias vivas.
     </p>
-    <p>
-      Cada proyecto es una búsqueda de equilibrio entre ritmo, emoción
-      y narrativa.
-    </p>
-  </section>
+  </div>
+  <div class="roles">
+    <a href="https://dorachrecords-prod.github.io/dorach-records/" target="_blank">Dorach Records — Compositor</a>
+    <a href="#">Hemiola y Síncopa — Profesor</a>
+    <a href="#">Focaraque — Productor · Creador</a>
+  </div>
+</section>
 
-  <!-- UNIVERSOS -->
-  <section class="universe-section">
-    <h2>Universo creativo</h2>
+<section class="universe-section compact">
+  <h2>Universo creativo</h2>
 
-    <div class="universe-item">
-      <div class="universe-text">
-        <p>
-          <strong>Dórach Records</strong> es el laboratorio donde nacen las ideas sonoras.
-        </p>
-        <p>
-          Producción musical y audiovisual como un proceso de exploración.
-        </p>
-      </div>
-      <div class="universe-image">
-        <a href="https://www.instagram.com/dorachrecordspm/" target="_blank">
-          <img src="assets/universe-dorach.jpg" alt="Dorach Records">
-        </a>
-      </div>
+  <div class="universe-item">
+    <div class="universe-text">
+      <p><strong>Dórach Records</strong> es el laboratorio donde nacen las ideas sonoras.</p>
+      <p>Producción musical, escucha consciente y narrativa audiovisual.</p>
     </div>
-
-    <div class="universe-item reverse">
-      <div class="universe-text">
-        <p>
-          <strong>Hemiola y Síncopa</strong> nace desde la pedagogía musical
-          y la curiosidad por el ritmo.
-        </p>
-        <p>
-          Comprender la música desde el cuerpo y la experiencia.
-        </p>
-      </div>
-      <div class="universe-image">
-        <a href="https://www.instagram.com/hemiolaysincopaac/" target="_blank">
-          <img src="assets/universe-hemiola.jpg" alt="Hemiola y Síncopa">
-        </a>
-      </div>
+    <div class="universe-image">
+      <a href="https://www.instagram.com/dorachrecordspm/" target="_blank">
+        <img src="assets/universe-dorach.jpg">
+      </a>
     </div>
+  </div>
 
-    <div class="universe-item">
-      <div class="universe-text">
-        <p>
-          <strong>Focaraque</strong> es un personaje animado que traduce ideas musicales
-          en gestos y silencios.
-        </p>
-        <p>
-          Música contada sin palabras.
-        </p>
-      </div>
-      <div class="universe-image">
-        <a href="https://www.instagram.com/focaraquemusic/" target="_blank">
-          <img src="assets/universe-foca.jpg" alt="Focaraque">
-        </a>
-      </div>
+  <div class="universe-item reverse">
+    <div class="universe-text">
+      <p><strong>Hemiola y Síncopa</strong> surge desde la pedagogía musical.</p>
+      <p>Ritmo, cuerpo y comprensión musical desde la experiencia.</p>
     </div>
-  </section>
+    <div class="universe-image">
+      <a href="https://www.instagram.com/hemiolaysincopaac/" target="_blank">
+        <img src="assets/universe-hemiola.jpg">
+      </a>
+    </div>
+  </div>
 
-  <!-- VIAJES -->
-  <section class="travel">
-    <h2>Exploraciones</h2>
-    <p>
-      Río y Asfalto es el espacio donde documento viajes,
-      encuentros y experiencias locales.
-    </p>
-    <p>
-      Un archivo personal de caminos, paisajes y momentos compartidos.
-    </p>
-  </section>
+  <div class="universe-item">
+    <div class="universe-text">
+      <p><strong>Focaraque</strong> es un personaje animado musical.</p>
+      <p>Una forma de hablar de música desde el gesto y el silencio.</p>
+    </div>
+    <div class="universe-image">
+      <a href="https://www.instagram.com/focaraquemusic/" target="_blank">
+        <img src="assets/universe-foca.jpg">
+      </a>
+    </div>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © <span>Fabian Araque</span> · Música · Pedagogía · Universos narrativos
-  </footer>
+<section class="compact bg-coffee pattern">
+  <h2 style="text-align:center;">Escuchar</h2>
+  <div class="audio-grid">
+    <div class="audio-card"><p>Último loop</p><audio controls src="assets/audio-01.mp3"></audio></div>
+    <div class="audio-card"><p>Improvisación en F</p><audio controls src="assets/audio-02.mp3"></audio></div>
+    <div class="audio-card"><p>Acompañamiento — Contigo Aprendí</p><audio controls src="assets/audio-03.mp3"></audio></div>
+    <div class="audio-card"><p>Acompañamiento — Quizás</p><audio controls src="assets/audio-04.mp3"></audio></div>
+  </div>
+</section>
+
+<section class="compact">
+  <div class="channels">
+    <a href="https://www.instagram.com/focaraquemusic/" target="_blank">Instagram</a>
+    <a href="https://youtube.com/@focaaraquemusic" target="_blank">YouTube</a>
+    <a href="https://wa.me/573008884574" target="_blank">WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  © Fabian Araque — música en equilibrio
+</footer>
 
 </body>
 </html>
