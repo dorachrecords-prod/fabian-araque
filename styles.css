@@ -62,7 +62,7 @@ body {
     ),
     url("preview1.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 
 
@@ -98,6 +98,12 @@ body {
   background: var(--blanco);
 }
 
+.card {
+  background: white;
+  color: #1a1a1a;
+}
+
+
 /* CONTACTO */
 #contacto {
   background:
@@ -107,7 +113,7 @@ body {
     ),
     url("fabian-01.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 
 .contact-links a {
@@ -153,4 +159,14 @@ footer {
   margin: 20px auto 0;
   font-size: 16px;
   line-height: 1.7;
+}
+
+.hero,
+#proyectos,
+#contacto {
+  color: white;
+}
+.hero h1,
+.section h2 {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
