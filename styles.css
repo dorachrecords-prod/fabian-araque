@@ -56,13 +56,22 @@ body {
   padding: 140px 20px;
   text-align: center;
   background:
-    linear-gradient(
-      rgba(214,195,165,0.75),
-      rgba(214,195,165,0.75)
-    ),
-    url("preview1.jpg");
+	linear-gradient(
+		rgba(214, 195, 165, 0.38),
+		rgba(214, 195, 165, 0.38)
+		),
+	url("preview1.jpg");
   background-size: cover;
   background-position: bottom;
+}
+.hero {
+  text-align: center;
+}
+
+.hero p {
+  text-align: justify;
+  margin: 0 auto;
+  max-width: 650px;
 }
 
 
@@ -75,10 +84,10 @@ body {
 /* PROYECTOS CON IMAGEN */
 #proyectos {
   background:
-    linear-gradient(
-      rgba(255,255,255,0.92),
-      rgba(255,255,255,0.92)
-    ),
+	linear-gradient(
+		rgba(214, 195, 165, 0.38),
+		rgba(214, 195, 165, 0.38)
+		),
     url("fabian-03.jpg");
   background-size: cover;
   background-position: center;
@@ -103,14 +112,24 @@ body {
   color: #1a1a1a;
 }
 
+.card {
+  color: black;
+}
+
+.card h3,
+.card p,
+.card a {
+  color: black;
+  text-shadow: none;
+}
 
 /* CONTACTO */
 #contacto {
   background:
-    linear-gradient(
-      rgba(214,195,165,0.85),
-      rgba(214,195,165,0.85)
-    ),
+	linear-gradient(
+		rgba(214, 195, 165, 0.38),
+		rgba(214, 195, 165, 0.38)
+		),
     url("fabian-01.jpg");
   background-size: cover;
   background-position: top;
@@ -169,4 +188,28 @@ footer {
 .hero h1,
 .section h2 {
   text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.hero h1 {
+  text-shadow:
+    0 3px 6px rgba(0,0,0,0.6),
+    0 10px 20px rgba(0,0,0,0.4);
+}
+
+h1, h2, h3 {
+  color: white;
+  text-shadow:
+    0 2px 4px rgba(0,0,0,0.45),
+    0 6px 12px rgba(0,0,0,0.35);
+}
+
+p, li, a {
+  color: white;
+  text-shadow:
+    0 1px 3px rgba(0,0,0,0.5),
+    0 4px 8px rgba(0,0,0,0.35);
+}
+@media (max-width: 768px) {
+  .hero p {
+    text-align: left;
+  }
 }
