@@ -3,42 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta property="og:title" content="Fabian Araque">
+  <meta property="og:description" content="Creador musical y audiovisual. Proyectos: Dórach Records, Focaraque, Hemiola y Síncopa, Río y Asfalto.">
+  <meta property="og:image" content="https://dorachrecords-prod.github.io/fabian-araque/og-fabian.png">
+  <meta property="og:url" content="https://dorachrecords-prod.github.io/fabian-araque/">
+  <meta property="og:type" content="website">
   <title>Fabian Araque</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 </head>
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar">
-    <div class="logo">Fabian Araque</div>
+    <div class="logo">
+  <img src="icono-fabian.png" alt="Fabian Araque logo">
+  <span>Fabian Araque</span>
+	</div>
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#sobre-mi">Sobre mí</a>
-      <a href="#contacto" class="btn">Escuchar</a>
+      <a href="https://music.youtube.com/channel/UC_2xTYUbG2Yr2a7tITJHvEA" 
+		 target="_blank" 
+		 class="btn">
+		Escuchar
+	</a>
     </nav>
   </header>
 
   <!-- HERO -->
-<section class="hero" id="inicio">
-  <h1>Fabian Araque</h1>
+	<section class="hero" id="inicio">
+	<div class="hero">
+	<h1>Fabian Araque</h1>
 
-  <p class="hero-intro">
-    Creador musical y audiovisual.
-  </p>
-
-  <p class="hero-description">
-    Pianista, creador y gestor de proyectos musicales.  
-    Desarrollo universos donde la música, la animación y el viaje se encuentran,
-    combinando educación, narrativa y experiencia audiovisual.
-  </p>
-
+	<div class="thought">
+		<p>
+      Creador musical y audiovisual. <br><br> Desarrollo proyectos donde la música,
+      la imagen se cruzan.
+    </p>
+  </div>
+</div>
 </section>
 
   <!-- PROYECTOS -->
   <section class="section" id="proyectos">
-
+	<h2>Proyectos</h2>
   <div class="cards">
 
     <a href="https://dorachrecords-prod.github.io/dorach-records/" class="card project-card" target="_blank">
@@ -60,7 +77,7 @@
     </a>
 
     <a href="https://dorachrecords-prod.github.io/rio-y-asfalto/" class="card project-card" target="_blank">
-      <img src="rio-asfalto-preview.jpg" alt="Río y Asfalto">
+      <img src="rio-asfalto-preview.png" alt="Río y Asfalto">
       <h3>Río y Asfalto</h3>
       <p>Viaje, paisaje y música como experiencia audiovisual.</p>
     </a>
@@ -68,20 +85,27 @@
   </div>
 </section>
 
-  <!-- CONTACTO -->
-  <section class="section" id="contacto">
-    <h2>Contacto</h2>
-    <div class="contact-links">
-      <a href="mailto:fabianaraque@gmail.com">Email</a>
-      <a href="#">YouTube</a>
-      <a href="#">Instagram</a>
-      <a href="#">Spotify</a>
-    </div>
-  </section>
+<footer>
+  <div class="footer-icons">
+    <a href="https://wa.me/573008884574" target="_blank" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
-  <footer>
-    <p>© Fabian Araque</p>
-  </footer>
+    <a href="https://open.spotify.com/intl-es/artist/5wLC5Pli1mpDRD9GbUensD" target="_blank" aria-label="Spotify">
+	  <i class="fab fa-spotify"></i>
+    </a>
+    
+	<a href="https://www.instagram.com/focaraquemusic/" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://youtube.com/@focaaraquemusic?si=ck8RQLOKShFSJMnP" target="_blank" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+
+  <p>© Fabian Araque</p>
+</footer>
 
 </body>
 </html>
