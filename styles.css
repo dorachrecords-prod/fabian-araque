@@ -1,3 +1,6 @@
+/* ===============================
+   VARIABLES
+================================ */
 :root {
   --cafe: #d6c3a5;
   --cafe-oscuro: #b49f82;
@@ -5,6 +8,9 @@
   --blanco: #ffffff;
 }
 
+/* ===============================
+   RESET + BASE
+================================ */
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +24,30 @@ body {
   line-height: 1.6;
 }
 
-/* NAVBAR */
+/* ===============================
+   TIPOGRAFÍA GLOBAL
+================================ */
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: white;
+  text-shadow:
+    0 2px 4px rgba(0,0,0,0.45),
+    0 6px 12px rgba(0,0,0,0.35);
+}
+
+p {
+  font-weight: 500;
+}
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -27,15 +56,25 @@ body {
   background: var(--blanco);
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 600;
+  color: var(--negro);
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 .navbar nav a {
   margin-left: 25px;
-  text-decoration: none;
   color: var(--negro);
   font-size: 14px;
 }
@@ -50,50 +89,120 @@ body {
 .btn:hover {
   background: var(--cafe-oscuro);
 }
-
-/* HERO CON IMAGEN */
+/* ===============================
+   HERO
+================================ */
 .hero {
-  padding: 140px 20px;
+  width: 100%;
+  max-width: none;
+}
+.hero {
+  overflow: hidden;
+}
+.hero {
+  height: 100vh;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 0px 0px;
+
   text-align: center;
-  background:
-	linear-gradient(
-		rgba(214, 195, 165, 0.38),
-		rgba(214, 195, 165, 0.38)
-		),
-	url("preview1.jpg");
+  color: white;
+
+  background: 
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("preview1.jpg");
+
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
 }
-.hero {
-  text-align: center;
+.thought {
+  background: rgba(255, 255, 255, 0.88);
+  color: #1a1a1a;
+
+  padding: 28px 36px;
+  max-width: 640px;
+  margin: 30px auto 0;
+
+  border-radius: 80px;
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.22);
+
+  position: relative;
+}
+.thought::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 80px;
+  width: 18px;
+  height: 18px;
+  background: rgba(255,255,255,0.88);
+  border-radius: 50%;
 }
 
-.hero p {
-  text-align: justify;
-  margin: 0 auto;
-  max-width: 650px;
+.thought::before {
+  content: "";
+  position: absolute;
+  bottom: -34px;
+  left: 60px;
+  width: 10px;
+  height: 10px;
+  background: rgba(255,255,255,0.88);
+  border-radius: 50%;
+}
+.thought p {
+  font-size: 16px;
+  line-height: 1.7;
 }
 
-
-/* SECCIONES */
+.thought p br + br {
+  margin-top: 8px;
+}
+.thought {
+  backdrop-filter: blur(2px);
+}
+/* ===============================
+   SECCIONES GENERALES
+================================ */
 .section {
   padding: 80px 60px;
   text-align: center;
+  color: white;
 }
 
-/* PROYECTOS CON IMAGEN */
+/* ===============================
+   PROYECTOS
+================================ */
 #proyectos {
   background:
-	linear-gradient(
-		rgba(214, 195, 165, 0.38),
-		rgba(214, 195, 165, 0.38)
-		),
-    url("fabian-03.jpg");
-  background-size: cover;
-  background-position: center;
+    linear-gradient(
+      rgba(214, 195, 165, 0.36),
+      rgba(214, 195, 165, 0.36)
+    ),
+    url("fabian-03.jpg") center / cover no-repeat;
+
+  color: white;
 }
 
-/* CARDS */
+#proyectos h2 {
+  margin-bottom: 4rem;
+}
+
+/* ===============================
+   CARDS
+================================ */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -101,52 +210,18 @@ body {
 }
 
 .card {
+  background: var(--blanco);
   border: 1px solid var(--cafe);
   padding: 30px;
   border-radius: 6px;
-  background: var(--blanco);
-}
-
-.card {
-  background: white;
-  color: #1a1a1a;
-}
-
-.card {
-  color: black;
+  color: var(--negro);
 }
 
 .card h3,
 .card p,
 .card a {
-  color: black;
-  text-shadow: none;
-}
-
-/* CONTACTO */
-#contacto {
-  background:
-	linear-gradient(
-		rgba(214, 195, 165, 0.38),
-		rgba(214, 195, 165, 0.38)
-		),
-    url("fabian-01.jpg");
-  background-size: cover;
-  background-position: top;
-}
-
-.contact-links a {
-  margin: 0 15px;
-  text-decoration: none;
   color: var(--negro);
-}
-
-/* FOOTER */
-footer {
-  padding: 30px;
-  text-align: center;
-  background: var(--negro);
-  color: var(--blanco);
+  text-shadow: none;
 }
 
 .project-card {
@@ -166,50 +241,62 @@ footer {
 .project-card:hover {
   transform: translateY(-6px);
 }
+/* ===============================
+   FOOTER
+================================ */
 
-.hero-intro {
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 10px;
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 15px;
 }
 
-.hero-description {
-  max-width: 800px;
-  margin: 20px auto 0;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.hero,
-#proyectos,
-#contacto {
+.footer-icons a {
+  font-size: 22px;
   color: white;
-}
-.hero h1,
-.section h2 {
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-.hero h1 {
-  text-shadow:
-    0 3px 6px rgba(0,0,0,0.6),
-    0 10px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3 {
-  color: white;
-  text-shadow:
-    0 2px 4px rgba(0,0,0,0.45),
-    0 6px 12px rgba(0,0,0,0.35);
+/* HOVERS por red */
+.footer-icons a:hover {
+  transform: translateY(-4px);
 }
 
-p, li, a {
-  color: white;
-  text-shadow:
-    0 1px 3px rgba(0,0,0,0.5),
-    0 4px 8px rgba(0,0,0,0.35);
+.footer-icons a:hover .fa-whatsapp {
+  color: #25D366;
 }
+.footer-icons a:hover .fa-instagram {
+  color: #E1306C;
+}
+.footer-icons a:hover .fa-spotify {
+  color: #1DB954;
+}
+.footer-icons a:hover .fa-youtube {
+  color: #FF0000;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background: var(--negro);
+  color: var(--blanco);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
 @media (max-width: 768px) {
-  .hero p {
+  .hero p,
+  .hero-description {
     text-align: left;
+  }
+
+  .navbar {
+    padding: 20px;
+  }
+
+  .section {
+    padding: 60px 20px;
   }
 }
