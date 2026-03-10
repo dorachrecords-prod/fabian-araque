@@ -36,7 +36,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <span>Fabian Araque</span>
 </div>
 
-<nav>
+<nav class="nav-links">
+
 <a href="#inicio">Inicio</a>
 <a href="#proyectos">Proyectos</a>
 <a href="#musica">Música</a>
@@ -48,6 +49,19 @@ class="btn">Escuchar</a>
 
 </nav>
 
+<div class="menu-toggle">
+<i class="fas fa-bars"></i>
+</div>
+<script>
+
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-links");
+
+toggle.addEventListener("click", () => {
+nav.classList.toggle("active");
+});
+
+</script>
 </header>
 
 
@@ -186,4 +200,5 @@ document.querySelector(".navbar")
 
 </body>
 </html>
+
 
