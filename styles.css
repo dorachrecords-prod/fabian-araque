@@ -265,7 +265,14 @@ a {
 ================================ */
 
 #musica{
-  background: var(--negro);
+  background:     
+  linear-gradient(
+      rgba(214, 195, 165, 0.36),
+      rgba(214, 195, 165, 0.36)
+    ),
+    url("fabian-04.jpg") center / cover no-repeat;
+
+  color: white;
 }
 
 #musica iframe{
@@ -280,7 +287,14 @@ a {
 ================================ */
 
 #video{
-  background: #111;
+  background:   
+  linear-gradient(
+      rgba(214, 195, 165, 0.36),
+      rgba(214, 195, 165, 0.36)
+    ),
+    url("fabian-05.jpg") top / cover no-repeat;
+
+  color: white;
 }
 
 #video iframe{
@@ -295,17 +309,18 @@ a {
 ================================ */
 
 .vision{
-  background: linear-gradient(
-      rgba(214,195,165,0.8),
-      rgba(214,195,165,0.8)
+  background:   
+  linear-gradient(
+      rgba(214, 195, 165, 0.36),
+      rgba(214, 195, 165, 0.36)
     ),
-    url("preview1.jpg") center / cover no-repeat;
+    url("fabian-06.jpg") center / cover no-repeat;
 
-  color: var(--negro);
+  color: white;
 }
 
 .vision h2{
-  color: var(--negro);
+  color: var(--white);
   text-shadow: none;
 }
 
@@ -379,3 +394,4 @@ footer {
   }
 
 }
+
