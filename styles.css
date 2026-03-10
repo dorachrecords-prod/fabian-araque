@@ -18,6 +18,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--blanco);
   color: var(--negro);
@@ -89,16 +93,20 @@ a {
 .btn:hover {
   background: var(--cafe-oscuro);
 }
+
 /* ===============================
    HERO
 ================================ */
+
 .hero {
   width: 100%;
   max-width: none;
 }
+
 .hero {
   overflow: hidden;
 }
+
 .hero {
   height: 100vh;
   box-sizing: border-box;
@@ -127,6 +135,7 @@ a {
 
   overflow: hidden;
 }
+
 .thought {
   background: rgba(255, 255, 255, 0.88);
   color: #1a1a1a;
@@ -141,6 +150,7 @@ a {
 
   position: relative;
 }
+
 .thought::after {
   content: "";
   position: absolute;
@@ -162,6 +172,7 @@ a {
   background: rgba(255,255,255,0.88);
   border-radius: 50%;
 }
+
 .thought p {
   font-size: 16px;
   line-height: 1.7;
@@ -170,12 +181,15 @@ a {
 .thought p br + br {
   margin-top: 8px;
 }
+
 .thought {
   backdrop-filter: blur(2px);
 }
+
 /* ===============================
    SECCIONES GENERALES
 ================================ */
+
 .section {
   padding: 80px 60px;
   text-align: center;
@@ -185,6 +199,7 @@ a {
 /* ===============================
    PROYECTOS
 ================================ */
+
 #proyectos {
   background:
     linear-gradient(
@@ -203,6 +218,7 @@ a {
 /* ===============================
    CARDS
 ================================ */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -215,6 +231,8 @@ a {
   padding: 30px;
   border-radius: 6px;
   color: var(--negro);
+
+  transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .card h3,
@@ -227,7 +245,6 @@ a {
 .project-card {
   text-decoration: none;
   color: var(--negro);
-  transition: transform 0.3s ease;
 }
 
 .project-card img {
@@ -239,8 +256,65 @@ a {
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
+
+/* ===============================
+   MUSICA
+================================ */
+
+#musica{
+  background: var(--negro);
+}
+
+#musica iframe{
+  max-width: 900px;
+  margin: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ===============================
+   VIDEO
+================================ */
+
+#video{
+  background: #111;
+}
+
+#video iframe{
+  max-width: 900px;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* ===============================
+   VISION
+================================ */
+
+.vision{
+  background: linear-gradient(
+      rgba(214,195,165,0.8),
+      rgba(214,195,165,0.8)
+    ),
+    url("preview1.jpg") center / cover no-repeat;
+
+  color: var(--negro);
+}
+
+.vision h2{
+  color: var(--negro);
+  text-shadow: none;
+}
+
+.vision p{
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+}
+
 /* ===============================
    FOOTER
 ================================ */
@@ -258,7 +332,6 @@ a {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* HOVERS por red */
 .footer-icons a:hover {
   transform: translateY(-4px);
 }
@@ -286,9 +359,10 @@ footer {
 /* ===============================
    RESPONSIVE
 ================================ */
+
 @media (max-width: 768px) {
-  .hero p,
-  .hero-description {
+
+  .hero p{
     text-align: left;
   }
 
@@ -299,4 +373,9 @@ footer {
   .section {
     padding: 60px 20px;
   }
+
+  .cards{
+    grid-template-columns: 1fr;
+  }
+
 }
