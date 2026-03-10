@@ -329,25 +329,6 @@ border-radius:10px;
 }
 
 /* ===============================
-   VISION
-================================ */
-
-.vision{
-  background:   
-  linear-gradient(
-      rgba(214, 195, 165, 0.36),
-      rgba(214, 195, 165, 0.36)
-    ),
-    url("fabian-06.jpg") center / cover no-repeat;
-}
-
-.vision p{
-  max-width: 700px;
-  margin: auto;
-  font-size: 18px;
-}
-
-/* ===============================
    FOOTER
 ================================ */
 
@@ -425,3 +406,4 @@ grid-template-columns:1fr;
 }
 
 }
+
