@@ -214,21 +214,22 @@ animation:fadeUp 1s ease;
 }
 
 /* ===============================
-   THOUGHT
+   DESCRIPCIÓN (THOUGHT)
 ================================ */
 
 .thought{
 
-background:rgba(255,255,255,.88);
+background:rgba(255,255,255,.90);
 color:#1a1a1a;
 
 padding:40px 60px;
 
-width:100%;
-
-margin:30px 0 0;
+width:80%;
+margin:30px auto;
 
 border:3px solid var(--cafe);
+
+border-radius:12px;
 
 box-shadow:
 0 12px 35px rgba(0,0,0,.22);
@@ -453,7 +454,7 @@ cursor:pointer;
 @media (max-width:768px){
 
 .hero h1{
-font-size:40px;
+font-size:36px;
 }
 
 .navbar{
@@ -468,19 +469,24 @@ padding:60px 20px;
 grid-template-columns:1fr;
 }
 
-/* ARREGLO IMAGENES MOBILE */
+/* IMAGENES MOBILE */
 
 .project-card img{
-
 height:auto;
 object-fit:contain;
+}
+
+/* DESCRIPCIÓN MOBILE */
+
+.thought{
+
+width:80%;
+padding:24px 22px;
 
 }
 
-/* THOUGHT */
-
-.thought{
-padding:30px 20px;
+.thought p{
+font-size:14px;
 }
 
 /* NAV MOBILE */
