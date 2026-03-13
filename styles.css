@@ -54,36 +54,26 @@ text-shadow:
 }
 
 h1{
-
 font-size:56px;
 margin-bottom:20px;
-
 }
 
 h2{
-
 font-size:38px;
 margin-bottom:40px;
-
 }
 
 h3{
-
 font-size:20px;
-
 }
 
 p{
-
 font-weight:500;
-
 }
 
 a{
-
 font-weight:600;
 text-decoration:none;
-
 }
 
 /* ===============================
@@ -166,9 +156,7 @@ transition:.3s;
 }
 
 .nav-links a:hover::after{
-
 width:100%;
-
 }
 
 /* BUTTON */
@@ -187,9 +175,7 @@ transition:.25s;
 }
 
 .btn:hover{
-
 background:var(--cafe-oscuro);
-
 }
 
 /* ===============================
@@ -207,7 +193,6 @@ align-items:center;
 justify-content:center;
 
 text-align:center;
-color:white;
 
 background:
 
@@ -224,16 +209,12 @@ background-position:center;
 
 }
 
-/* HERO TITLE */
-
 .hero h1{
-
 animation:fadeUp 1s ease;
-
 }
 
 /* ===============================
-   THOUGHT BUBBLE (AHORA FULL WIDTH)
+   THOUGHT
 ================================ */
 
 .thought{
@@ -244,11 +225,10 @@ color:#1a1a1a;
 padding:40px 60px;
 
 width:100%;
-max-width:none;
 
 margin:30px 0 0;
 
-border-radius:0;
+border:3px solid var(--cafe);
 
 box-shadow:
 0 12px 35px rgba(0,0,0,.22);
@@ -258,42 +238,6 @@ position:relative;
 backdrop-filter:blur(2px);
 
 animation:fadeUp 1.2s ease;
-
-}
-
-.thought::after{
-
-content:"";
-
-position:absolute;
-
-bottom:-20px;
-left:80px;
-
-width:20px;
-height:18px;
-
-background:rgba(255,255,255,.88);
-
-border-radius:50%;
-
-}
-
-.thought::before{
-
-content:"";
-
-position:absolute;
-
-bottom:-34px;
-left:60px;
-
-width:10px;
-height:10px;
-
-background:rgba(255,255,255,.88);
-
-border-radius:50%;
 
 }
 
@@ -334,9 +278,7 @@ url("fabian-03.jpg") center / cover no-repeat;
 }
 
 #proyectos h2{
-
 margin-bottom:4rem;
-
 }
 
 /* ===============================
@@ -353,8 +295,6 @@ repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
 
 }
-
-/* CARD */
 
 .card{
 
@@ -382,6 +322,8 @@ text-shadow:none;
 
 }
 
+/* IMAGENES PROYECTOS */
+
 .project-card img{
 
 width:100%;
@@ -393,8 +335,6 @@ border-radius:4px;
 margin-bottom:15px;
 
 }
-
-/* CARD HOVER */
 
 .project-card:hover{
 
@@ -448,8 +388,6 @@ color:var(--blanco);
 
 }
 
-/* ICONOS */
-
 .footer-icons{
 
 display:flex;
@@ -472,12 +410,8 @@ color .3s ease;
 }
 
 .footer-icons a:hover{
-
 transform:translateY(-4px);
-
 }
-
-/* COLORES ICONOS */
 
 .footer-icons a:hover .fa-whatsapp{color:#25D366;}
 .footer-icons a:hover .fa-instagram{color:#E1306C;}
@@ -491,17 +425,13 @@ transform:translateY(-4px);
 @keyframes fadeUp{
 
 0%{
-
 opacity:0;
 transform:translateY(40px);
-
 }
 
 100%{
-
 opacity:1;
 transform:translateY(0);
-
 }
 
 }
@@ -511,11 +441,9 @@ transform:translateY(0);
 ================================ */
 
 .menu-toggle{
-
 display:none;
 font-size:22px;
 cursor:pointer;
-
 }
 
 /* ===============================
@@ -526,10 +454,6 @@ cursor:pointer;
 
 .hero h1{
 font-size:40px;
-}
-
-.hero p{
-text-align:left;
 }
 
 .navbar{
@@ -544,7 +468,16 @@ padding:60px 20px;
 grid-template-columns:1fr;
 }
 
-/* THOUGHT MOBILE */
+/* ARREGLO IMAGENES MOBILE */
+
+.project-card img{
+
+height:auto;
+object-fit:contain;
+
+}
+
+/* THOUGHT */
 
 .thought{
 padding:30px 20px;
