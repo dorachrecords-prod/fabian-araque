@@ -434,51 +434,6 @@ border-radius:12px;
 }
 
 /* ===============================
-   VIDEO
-================================ */
-
-#video{
-
-background:
-
-linear-gradient(
-rgba(214,195,165,.36),
-rgba(214,195,165,.36)
-),
-
-url("fabian-05.jpg") top / cover no-repeat;
-
-}
-
-/* VIDEO RESPONSIVE */
-
-.video-container{
-
-max-width:900px;
-margin:auto;
-
-position:relative;
-
-padding-bottom:56.25%;
-height:0;
-
-}
-
-.video-container iframe{
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-border-radius:10px;
-
-}
-
-/* ===============================
    FOOTER
 ================================ */
 
