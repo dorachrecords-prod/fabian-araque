@@ -4,7 +4,13 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fabian Araque</title>
+
+<meta name="description" content="Creador musical y audiovisual. Proyectos de música, animación y narrativa sonora.">
+
+<!-- Open Graph -->
 
 <meta property="og:title" content="Fabian Araque">
 <meta property="og:description" content="Creador musical y audiovisual.">
@@ -12,27 +18,37 @@
 <meta property="og:url" content="https://dorachrecords-prod.github.io/fabian-araque/">
 <meta property="og:type" content="website">
 
-<title>Fabian Araque</title>
-
 <link rel="icon" href="favicon.png">
 
-<link rel="stylesheet" href="styles.css">
+<!-- Fonts -->
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
 
 <link
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 />
 
+<!-- Styles -->
+
+<link rel="stylesheet" href="styles.css">
+
 </head>
 
+
+
 <body>
+
+
+
+<!-- NAVBAR -->
 
 <header class="navbar">
 
 <div class="logo">
-<img src="icono-fabian.png">
+<img src="icono-fabian.png" alt="Fabian Araque">
 <span>Fabian Araque</span>
 </div>
 
@@ -43,27 +59,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <a href="#musica">Música</a>
 <a href="#video">Video</a>
 
-<a href="https://music.youtube.com/channel/UC_2xTYUbG2Yr2a7tITJHvEA"
+<a
+href="https://music.youtube.com/channel/UC_2xTYUbG2Yr2a7tITJHvEA"
 target="_blank"
-class="btn">Escuchar</a>
+class="btn"
+>
+Escuchar
+</a>
 
 </nav>
 
 <div class="menu-toggle">
 <i class="fas fa-bars"></i>
 </div>
-<script>
 
-const toggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".nav-links");
-
-toggle.addEventListener("click", () => {
-nav.classList.toggle("active");
-});
-
-</script>
 </header>
 
+
+
+<!-- HERO -->
 
 <section class="hero" id="inicio">
 
@@ -79,13 +93,14 @@ donde la música no solo se escucha, sino que también se observa y se recorre.
 
 <br><br>
 
-Soy elfundador de Dórach Records y creador de proyectos como Focaraque,
-Hemiola y Síncopa y Río y Asfalto.
+Soy el fundador de Dórach Records y creador de proyectos como
+Focaraque, Hemiola y Síncopa y Río y Asfalto.
 
 <br><br>
 
 A través de estos proyectos investigo nuevas formas de compartir la música:
-desde animaciones y relatos visuales hasta experiencias pedagógicas y documentales sonoros.
+desde animaciones y relatos visuales hasta experiencias pedagógicas
+y documentales sonoros.
 
 </p>
 
@@ -94,6 +109,9 @@ desde animaciones y relatos visuales hasta experiencias pedagógicas y documenta
 </section>
 
 
+
+<!-- PROYECTOS -->
+
 <section class="section" id="proyectos">
 
 <h2>Proyectos</h2>
@@ -101,33 +119,58 @@ desde animaciones y relatos visuales hasta experiencias pedagógicas y documenta
 <div class="cards">
 
 <a href="https://dorachrecords-prod.github.io/dorach-records/" class="card project-card" target="_blank">
-<img src="dorach-preview.jpg">
+
+<img src="dorach-preview.jpg" alt="Dórach Records">
+
 <h3>Dórach Records</h3>
+
 <p>Sello y plataforma de producción musical.</p>
+
 </a>
+
+
 
 <a href="https://dorachrecords-prod.github.io/hemiola-y-sincopa/" class="card project-card" target="_blank">
-<img src="hemiola-preview.jpg">
+
+<img src="hemiola-preview.jpg" alt="Hemiola y Síncopa">
+
 <h3>Hemiola y Síncopa</h3>
+
 <p>Educación musical enfocada en ritmo y teoría aplicada.</p>
+
 </a>
+
+
 
 <a href="https://dorachrecords-prod.github.io/focaraque/" class="card project-card" target="_blank">
-<img src="focaraque-preview.jpg">
+
+<img src="focaraque-preview.jpg" alt="Focaraque">
+
 <h3>Focaraque</h3>
+
 <p>Universo musical y narrativo.</p>
+
 </a>
 
+
+
 <a href="https://dorachrecords-prod.github.io/rio-y-asfalto/" class="card project-card" target="_blank">
-<img src="rio-asfalto-preview.png">
+
+<img src="rio-asfalto-preview.png" alt="Río y Asfalto">
+
 <h3>Río y Asfalto</h3>
+
 <p>Viaje, paisaje y música como experiencia audiovisual.</p>
+
 </a>
 
 </div>
 
 </section>
 
+
+
+<!-- MUSICA -->
 
 <section class="section" id="musica">
 
@@ -138,13 +181,16 @@ style="border-radius:12px"
 src="https://open.spotify.com/embed/artist/5wLC5Pli1mpDRD9GbUensD"
 width="100%"
 height="352"
-frameBorder="0"
+frameborder="0"
 allowfullscreen=""
 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
 </iframe>
 
 </section>
 
+
+
+<!-- VIDEO -->
 
 <section class="section" id="video">
 
@@ -162,6 +208,11 @@ allowfullscreen>
 </div>
 
 </section>
+
+
+
+<!-- FOOTER -->
+
 <footer>
 
 <div class="footer-icons">
@@ -189,16 +240,36 @@ allowfullscreen>
 </footer>
 
 
+
+<!-- SCRIPTS -->
+
 <script>
 
+/* MENU MOBILE */
+
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-links");
+
+toggle.addEventListener("click", () => {
+
+nav.classList.toggle("active");
+
+});
+
+
+/* NAVBAR SCROLL EFFECT */
+
 window.addEventListener("scroll",function(){
-document.querySelector(".navbar")
+
+document
+.querySelector(".navbar")
 .classList.toggle("scrolled",window.scrollY>20)
-})
+
+});
 
 </script>
 
+
+
 </body>
 </html>
-
-
