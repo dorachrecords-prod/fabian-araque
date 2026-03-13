@@ -232,19 +232,23 @@ animation:fadeUp 1s ease;
 
 }
 
-/* THOUGHT BUBBLE */
+/* ===============================
+   THOUGHT BUBBLE (AHORA FULL WIDTH)
+================================ */
 
 .thought{
 
 background:rgba(255,255,255,.88);
 color:#1a1a1a;
 
-padding:28px 30px;
+padding:40px 60px;
 
-max-width:640px;
-margin:30px auto 0;
+width:100%;
+max-width:none;
 
-border-radius:80px;
+margin:30px 0 0;
+
+border-radius:0;
 
 box-shadow:
 0 12px 35px rgba(0,0,0,.22);
@@ -365,7 +369,6 @@ border-radius:6px;
 color:var(--negro);
 
 transition:
-
 transform .35s ease,
 box-shadow .35s ease;
 
@@ -567,33 +570,29 @@ cursor:pointer;
 @media (max-width:768px){
 
 .hero h1{
-
 font-size:40px;
-
 }
 
 .hero p{
-
 text-align:left;
-
 }
 
 .navbar{
-
 padding:20px;
-
 }
 
 .section{
-
 padding:60px 20px;
-
 }
 
 .cards{
-
 grid-template-columns:1fr;
+}
 
+/* THOUGHT MOBILE */
+
+.thought{
+padding:30px 20px;
 }
 
 /* NAV MOBILE */
@@ -601,7 +600,6 @@ grid-template-columns:1fr;
 .nav-links{
 
 position:absolute;
-
 top:70px;
 left:0;
 
@@ -622,22 +620,16 @@ box-shadow:
 }
 
 .nav-links a{
-
 margin:12px 0;
 font-size:16px;
-
 }
 
 .nav-links.active{
-
 display:flex;
-
 }
 
 .menu-toggle{
-
 display:block;
-
 }
 
 }
