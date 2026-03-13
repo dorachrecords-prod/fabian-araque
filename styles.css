@@ -198,7 +198,7 @@ background:var(--cafe-oscuro);
 
 .hero{
 
-height:300vh;
+height:100vh;
 
 display:flex;
 flex-direction:column;
@@ -239,7 +239,7 @@ animation:fadeUp 1s ease;
 background:rgba(255,255,255,.88);
 color:#1a1a1a;
 
-padding:28px 36px;
+padding:28px 50px;
 
 max-width:640px;
 margin:30px auto 0;
